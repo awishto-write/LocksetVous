@@ -6,6 +6,8 @@ import { useTheme } from '../contexts/ThemeContext';
 
 export function Home(props) {
   const { theme, isDark } = useTheme();
+  const { onNavigate } = props; // ✅ we get the navigation function from App.jsx
+
   const styles = {
     container: {
       padding: '48px 24px',
@@ -103,10 +105,14 @@ export function Home(props) {
           Découvrez nos soins capillaires authentiques, nos extensions premium et nos services personnalisés pour révéler la beauté naturelle de vos cheveux texturés.
         </p>
         <div style={styles.buttonContainer}>
-          <button style={{ ...styles.button, ...styles.primaryButton }}>
+          <button style={{ ...styles.button, ...styles.primaryButton }}
+            onClick={() => onNavigate('/services/appointment')}
+            >
             Découvrir nos services
           </button>
-          <button style={{ ...styles.button, ...styles.secondaryButton }}>
+          <button style={{ ...styles.button, ...styles.secondaryButton }}
+            onClick={() => onNavigate('/products/accessories')}
+            >
             Nos produits
           </button>
         </div>
@@ -140,3 +146,48 @@ export function Home(props) {
     </div>
   );
 }
+
+
+
+
+
+// src/pages/Home.jsx
+// import { useTheme } from '../contexts/ThemeContext';
+
+// export function Home(props) {
+//   const { theme, isDark } = useTheme();
+
+//   const handleNavigate = (path) => {
+//     window.dispatchEvent(new CustomEvent('navigate', { detail: path }));
+//   };
+
+//   const styles = { /* keep your styles as before */ };
+
+//   return (
+//     <div style={styles.container}>
+//       <div style={styles.heroSection}>
+//         <h1 style={styles.heroTitle}>
+//           Sublimez vos <span style={styles.heroTitleHighlight}>cheveux naturels</span> avec expertise
+//         </h1>
+//         <p style={styles.heroSubtitle}>
+//           Découvrez nos soins capillaires authentiques, nos extensions premium et nos services personnalisés pour révéler la beauté naturelle de vos cheveux texturés.
+//         </p>
+//         <div style={styles.buttonContainer}>
+//           <button
+//             style={{ ...styles.button, ...styles.primaryButton }}
+//             onClick={() => handleNavigate('/services/appointment')}
+//           >
+//             Découvrir nos services
+//           </button>
+//           <button
+//             style={{ ...styles.button, ...styles.secondaryButton }}
+//             onClick={() => handleNavigate('/products/accessories')}
+//           >
+//             Nos produits
+//           </button>
+//         </div>
+//       </div>
+//       {/* rest stays the same */}
+//     </div>
+//   );
+// }

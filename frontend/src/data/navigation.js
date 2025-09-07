@@ -27,6 +27,8 @@ export const PAGES = {
       { id: 'offers-services', label: 'Offres', path: '/services/offers' },
     ],
   },
-  'About': { id: 'about', label: 'About', path: '/about' },
+  'About': { id: 'about', label: 'À Propos', path: '/about' },
   'Contact': { id: 'contact', label: 'Contact', path: '/contact' },
 };
+
+// Use English for everything

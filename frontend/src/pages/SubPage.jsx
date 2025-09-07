@@ -3,6 +3,7 @@
 // ===================================
 
 import { useTheme } from '../contexts/ThemeContext';
+import { PAGES } from '../data/navigation';
 
 export function SubPage(props) {
   const { pageData } = props;
@@ -46,27 +47,63 @@ export function SubPage(props) {
     },
   };
 
+  // const getBreadcrumbs = (path) => {
+  //   const parts = path.split('/').filter(p => p !== '');
+  //   let currentPath = '';
+  //   return parts.map((part, index) => {
+  //     currentPath += `/${part}`;
+  //     let label = part.charAt(0).toUpperCase() + part.slice(1);
+  //     if (part === 'products') label = 'Produits';
+  //     if (part === 'services') label = 'Services';
+
+  //     return (
+  //       <span key={index} style={{ color: index === parts.length - 1 ? theme.primary : theme.secondary }}>
+  //         {label} {index < parts.length - 1 && ' / '}
+  //       </span>
+  //     );
+  //   });
+  // };
+
+
   const getBreadcrumbs = (path) => {
     const parts = path.split('/').filter(p => p !== '');
     let currentPath = '';
+
+    // Helper: search labels in PAGES + subItems
+    const findLabel = (id, pages = PAGES) => {
+      for (const key in pages) {
+        const page = pages[key];
+        if (page.id === id) return page.label;
+        if (page.subItems) {
+          const sub = page.subItems.find(item => item.id === id);
+          if (sub) return sub.label;
+        }
+      }
+      return id.charAt(0).toUpperCase() + id.slice(1); // fallback
+    };
+
     return parts.map((part, index) => {
       currentPath += `/${part}`;
-      let label = part.charAt(0).toUpperCase() + part.slice(1);
-      if (part === 'products') label = 'Produits';
-      if (part === 'services') label = 'Services';
+      const label = findLabel(part);
 
       return (
-        <span key={index} style={{ color: index === parts.length - 1 ? theme.primary : theme.secondary }}>
+        <span
+          key={index}
+          style={{ color: index === parts.length - 1 ? theme.primary : theme.secondary }}
+        >
           {label} {index < parts.length - 1 && ' / '}
         </span>
       );
     });
   };
 
+  
+
   return (
     <div style={styles.container}>
       <div style={{ color: theme.secondary, fontSize: '14px', marginBottom: '16px' }}>
         {getBreadcrumbs(pageData.path)}
+        {/* {getBreadcrumbs(pageData.label)} */}
       </div>
       <h1 style={styles.title}>{pageData.label}</h1>
       <p style={styles.subtitle}>Description détaillée du contenu disponible dans cette section.</p>
