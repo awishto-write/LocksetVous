@@ -228,8 +228,11 @@ export function Contact(props) {
     event.preventDefault();
     setLoading(true);
 
-    const formActionURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdrUD-KPmCrbfCmZd5qau1EgFFrsLAFiFN7ITeOTA-YcQDRhA/formResponse';
-    // "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdqW61R_XLSazT7cI0FieQGtJuRl_ZsfVYrudNUn4cpHB3xLA/formResponse" 
+    // Buffer data
+    //const formActionURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdrUD-KPmCrbfCmZd5qau1EgFFrsLAFiFN7ITeOTA-YcQDRhA/formResponse';
+
+    // Actual form
+    const formActionURL ="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdqW61R_XLSazT7cI0FieQGtJuRl_ZsfVYrudNUn4cpHB3xLA/formResponse" 
     
     const data = new FormData();
 
@@ -433,7 +436,3 @@ export function Contact(props) {
     </div>
   );
 }
-
-
-
-
