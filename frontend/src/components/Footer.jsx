@@ -41,7 +41,7 @@ export function Footer() {
       <div style={styles.container}>
         <p style={styles.copyright}>
           {/* &copy; 2025 Locks&Vous. All rights reserved. */}
-          © {new Date().getFullYear()} Locks & Vous. Tous droits réservés.
+          © {new Date().getFullYear()} Locks&Vous. Tous droits réservés.
         </p>
       </div>
     </footer>

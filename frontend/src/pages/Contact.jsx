@@ -228,19 +228,10 @@ export function Contact(props) {
     event.preventDefault();
     setLoading(true);
 
-    // Buffer data
-    //const formActionURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdrUD-KPmCrbfCmZd5qau1EgFFrsLAFiFN7ITeOTA-YcQDRhA/formResponse';
 
     // Actual form
-    const formActionURL ="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdqW61R_XLSazT7cI0FieQGtJuRl_ZsfVYrudNUn4cpHB3xLA/formResponse" 
-    
+    const formActionURL ="https://docs.google.com/forms/d/e/1FAIpQLSdqW61R_XLSazT7cI0FieQGtJuRl_ZsfVYrudNUn4cpHB3xLA/formResponse";
     const data = new FormData();
-
-    // Buffer data
-    // data.append('entry.1653249143', event.target.name.value);   // Name
-    // data.append('entry.345674368', event.target.email.value);   // Email
-    // data.append('entry.1203962156', event.target.phone.value);  // Phone
-    // data.append('entry.1274324805', event.target.message.value);// Message
 
     // Real Data - I think
     data.append('entry.1067131892', event.target.name.value);   // Name
@@ -281,7 +272,8 @@ export function Contact(props) {
       <div style={styles.contentGrid}>
         <div style={styles.formSection}>
           <h2 style={styles.formTitle}>Envoyez-nous un message</h2>
-          <form>
+          {/* <form> */}
+          <form onSubmit={handleSubmit}>
             <div style={styles.formGroup}>
               <label htmlFor="name" style={styles.label}>
                 Nom complet
@@ -345,23 +337,21 @@ export function Contact(props) {
                 <SiTiktok size={24} />
               </a>
               <a
-                href="https://wa.me/1234567890"
+                href="http://wa.me/33759571981"
                 style={styles.socialLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaWhatsapp size={24} />
-                {/* <MessageSquare size={24} /> */}
               </a>
               <a
-                href="https://wa.me/0987654321"
+                href="http://wa.me/2250757655900"
                 style={styles.socialLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {/* <MessageSquare size={24} /> */}
                 <FaWhatsapp size={24} />
-                {/* <Whatsapp size={24} /> */}
               </a>
             </div>
           </div>
