@@ -2,12 +2,16 @@
 // src/components/MobileMenu.jsx
 // ===================================
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { ChevronDown, X, Menu } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { PAGES } from '../data/navigation';
 
 export function MobileMenu(props) {
-  const { onNavigate, onClose, currentPage } = props;
+  // const { onNavigate, onClose, currentPage } = props;
+  const { onNavigate, onClose } = props;
+  const location = useLocation(); 
+  const currentPath = location.pathname;
   const { theme } = useTheme();
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -66,9 +70,9 @@ export function MobileMenu(props) {
 
   const getActiveState = (path) => {
     if (path === '/') {
-      return currentPage === path;
+      return currentPath === path;
     }
-    return currentPage.startsWith(path);
+    return currentPath.startsWith(path);
   };
 
   return (
@@ -101,8 +105,8 @@ export function MobileMenu(props) {
                   key={subItem.id}
                   style={{
                     ...styles.submenuItem,
-                    color: currentPage === subItem.path || hoveredItem === subItem.id ? theme.primary : theme.secondary,
-                    fontWeight: currentPage === subItem.path ? 'bold' : 'normal'
+                    color: currentPath === subItem.path || hoveredItem === subItem.id ? theme.primary : theme.secondary,
+                    fontWeight: currentPath === subItem.path ? 'bold' : 'normal'
                   }}
                   onMouseEnter={() => setHoveredItem(subItem.id)}
                   onMouseLeave={() => setHoveredItem(null)}

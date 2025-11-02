@@ -4,12 +4,16 @@
 
 
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingCart, User, Moon, Sun, ChevronDown } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { PAGES } from '../data/navigation';
 
 export function Topbar(props) {
-  const { onNavigate, onToggleMenu, isMobileMenuOpen, currentPage } = props;
+  //const { onNavigate, onToggleMenu, isMobileMenuOpen, currentPage } = props;
+  const { onNavigate, onToggleMenu, isMobileMenuOpen } = props;
+  const location = useLocation(); 
+  const currentPath = location.pathname;
   const { theme, toggleTheme, isDark } = useTheme();
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 950);
   const [hoveredMenuId, setHoveredMenuId] = useState(null);
@@ -23,6 +27,11 @@ export function Topbar(props) {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+   
+  const getActiveState = (path) => {
+    if (path === '/') return currentPath === path;
+    return currentPath.startsWith(path);
+  };
 
   const styles = {
     topbar: {
@@ -132,11 +141,6 @@ export function Topbar(props) {
     }
   };
 
-  const getActiveState = (path) => {
-    if (path === '/') return currentPage === path;
-    return currentPage.startsWith(path);
-  };
-
   return (
     <div style={styles.topbar}>
       {/* ✅ Logo + Text clickable */}
@@ -192,13 +196,13 @@ export function Topbar(props) {
                       style={{
                         padding: '12px 16px',
                         color:
-                          currentPage === subItem.path || hoveredSubItemId === subItem.id
+                          currentPath === subItem.path || hoveredSubItemId === subItem.id
                             ? theme.primary
                             : theme.text,
-                        fontWeight: currentPage === subItem.path ? 'bold' : 'normal',
+                        fontWeight: currentPath === subItem.path ? 'bold' : 'normal',
                         transition: 'color 0.3s ease',
                         borderBottom:
-                          currentPage === subItem.path ? `2px solid ${theme.primary}` : 'none',
+                          currentPath === subItem.path ? `2px solid ${theme.primary}` : 'none',
                       }}
                       onMouseEnter={() => setHoveredSubItemId(subItem.id)}
                       onMouseLeave={() => setHoveredSubItemId(null)}

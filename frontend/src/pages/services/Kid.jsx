@@ -54,17 +54,22 @@ export function Kid() {
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 1</h3>
+          <h3 style={cardStyles.cardTitle}>Carte Jeux </h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 1.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 2</h3>
+          <h3 style={cardStyles.cardTitle}>Puzzle</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 2.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 3</h3>
+          <h3 style={cardStyles.cardTitle}>Promos event (Noël, Paques, etc)</h3>
+          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p>
+        </div>
+         <div style={cardStyles.card}>
+          <div style={cardStyles.cardImage}></div>
+          <h3 style={cardStyles.cardTitle}>Atelier création et sensibilisation</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p>
         </div>
       </div>

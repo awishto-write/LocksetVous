@@ -3,11 +3,12 @@
 // ===================================
 
 import { useTheme } from '../contexts/ThemeContext';
+import { useNavigate } from 'react-router-dom';
 
 export function Home(props) {
   const { theme, isDark } = useTheme();
-  const { onNavigate } = props; // ✅ we get the navigation function from App.jsx
-
+//  const { onNavigate } = props; // ✅ we get the navigation function from App.jsx
+  const navigate = useNavigate();
   const styles = {
     container: {
       padding: '48px 24px',
@@ -106,12 +107,14 @@ export function Home(props) {
         </p>
         <div style={styles.buttonContainer}>
           <button style={{ ...styles.button, ...styles.primaryButton }}
-            onClick={() => onNavigate('/services/appointment')}
+           // onClick={() => onNavigate('/services/hairstyle')}
+            onClick={() => navigate('/services/hairstyle')}
             >
             Découvrir nos services
           </button>
           <button style={{ ...styles.button, ...styles.secondaryButton }}
-            onClick={() => onNavigate('/products/accessories')}
+            //onClick={() => onNavigate('/products/moisturizers')}
+            onClick={() => navigate('/products/moisturizers')}
             >
             Nos produits
           </button>
@@ -130,7 +133,7 @@ export function Home(props) {
           <div style={styles.cardIcon}>✂️</div>
           <h3 style={styles.cardTitle}>Expertise Locks</h3>
           <p style={styles.cardText}>
-            Spécialistes des locks, tresses et coiffures afro avec 10+ ans d'expérience.
+            Spécialistes des locks, tresses et coiffures afro.
           </p>
         </div> 
         <div style={styles.card}>
@@ -146,48 +149,3 @@ export function Home(props) {
     </div>
   );
 }
-
-
-
-
-
-// src/pages/Home.jsx
-// import { useTheme } from '../contexts/ThemeContext';
-
-// export function Home(props) {
-//   const { theme, isDark } = useTheme();
-
-//   const handleNavigate = (path) => {
-//     window.dispatchEvent(new CustomEvent('navigate', { detail: path }));
-//   };
-
-//   const styles = { /* keep your styles as before */ };
-
-//   return (
-//     <div style={styles.container}>
-//       <div style={styles.heroSection}>
-//         <h1 style={styles.heroTitle}>
-//           Sublimez vos <span style={styles.heroTitleHighlight}>cheveux naturels</span> avec expertise
-//         </h1>
-//         <p style={styles.heroSubtitle}>
-//           Découvrez nos soins capillaires authentiques, nos extensions premium et nos services personnalisés pour révéler la beauté naturelle de vos cheveux texturés.
-//         </p>
-//         <div style={styles.buttonContainer}>
-//           <button
-//             style={{ ...styles.button, ...styles.primaryButton }}
-//             onClick={() => handleNavigate('/services/appointment')}
-//           >
-//             Découvrir nos services
-//           </button>
-//           <button
-//             style={{ ...styles.button, ...styles.secondaryButton }}
-//             onClick={() => handleNavigate('/products/accessories')}
-//           >
-//             Nos produits
-//           </button>
-//         </div>
-//       </div>
-//       {/* rest stays the same */}
-//     </div>
-//   );
-// }

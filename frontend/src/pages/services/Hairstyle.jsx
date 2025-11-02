@@ -16,7 +16,6 @@ import { PAGES } from '../../data/navigation';
 import { useTheme } from '../../contexts/ThemeContext';
 
 export function Hairstyle() {
-  //const pageData = PAGES.Produits.subItems.find((item) => item.id === 'offers-products');
   const pageData = PAGES.Services.subItems.find(item => item.id === 'hairstyle');
   const { theme } = useTheme();
 
@@ -55,17 +54,17 @@ export function Hairstyle() {
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
           <h3 style={cardStyles.cardTitle}>Bloc 1</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 1.</p>
+          <p style={cardStyles.cardDescription}>Nos départs crochet, micro twist, vanille twist</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
           <h3 style={cardStyles.cardTitle}>Bloc 2</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 2.</p>
+          <p style={cardStyles.cardDescription}>Nos extensions naturels humains</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
           <h3 style={cardStyles.cardTitle}>Bloc 3</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p>
+          <p style={cardStyles.cardDescription}>Coiffure sur locks, bantu locks, vanille barrels twist</p>
         </div>
       </div>
     </PageTemplate>

@@ -136,26 +136,41 @@ export function PageTemplate({ pageData, children }) {
   const getBreadcrumbs = (path) => {
     const parts = path.split('/').filter(Boolean);
 
-    const findLabel = (id, pages = PAGES) => {
-      for (const key in pages) {
-        const page = pages[key];
-        if (page.id === id) return page.label;
+    return parts.map((part, index) => {
+      // Build the full path up to this point
+      const fullPath = '/' + parts.slice(0, index + 1).join('/');
+      
+      // Search for matching label by full path
+      let label = null;
+      for (const key in PAGES) {
+        const page = PAGES[key];
+        if (page.path === fullPath) {
+          label = page.label;
+          break;
+        }
         if (page.subItems) {
-          const sub = page.subItems.find((item) => item.id === id);
-          if (sub) return sub.label;
+          const sub = page.subItems.find((item) => item.path === fullPath);
+          if (sub) {
+            label = sub.label;
+            break;
+          }
         }
       }
-      return id.charAt(0).toUpperCase() + id.slice(1);
-    };
+      
+      // Fallback to capitalized segment
+      if (!label) {
+        label = part.charAt(0).toUpperCase() + part.slice(1);
+      }
 
-    return parts.map((part, index) => (
-      <span
-        key={index}
-        style={{ color: index === parts.length - 1 ? theme.primary : theme.secondary }}
-      >
-        {findLabel(part)}{index < parts.length - 1 ? ' / ' : ''}
-      </span>
-    ));
+      return (
+        <span
+          key={index}
+          style={{ color: index === parts.length - 1 ? theme.primary : theme.secondary }}
+        >
+          {label}{index < parts.length - 1 ? ' / ' : ''}
+        </span>
+      );
+    });
   };
 
   // ---- Return is clean, children renders page-specific content ----
@@ -163,7 +178,7 @@ export function PageTemplate({ pageData, children }) {
     <div style={styles.container}>
       <div style={styles.breadcrumbs}>{getBreadcrumbs(pageData.path)}</div>
       <h1 style={styles.title}>{pageData.label}</h1>
-      <p style={styles.subtitle}>Description détaillée du contenu disponible dans cette section.</p>
+      {/* <p style={styles.subtitle}>Description détaillée du contenu disponible dans cette section.</p> */}
       <div style={styles.content}>{children}</div>
     </div>
   );

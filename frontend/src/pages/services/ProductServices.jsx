@@ -54,17 +54,17 @@ export function ProductServices() {
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 1</h3>
+          <h3 style={cardStyles.cardTitle}>Carte fidélité</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 1.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 2</h3>
+          <h3 style={cardStyles.cardTitle}>Offre routine (Adapté à la routine d’achat)</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 2.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 3</h3>
+          <h3 style={cardStyles.cardTitle}>Promos</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p>
         </div>
       </div>
