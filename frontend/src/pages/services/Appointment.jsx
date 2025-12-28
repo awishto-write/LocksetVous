@@ -61,8 +61,11 @@ export function Appointment() {
           <ol style={styles.list}>
             <li style={styles.listItem}> Nous contacter via nos réseaux sociaux.</li>
             <li style={styles.listItem}>Préciser le type de prestation que vous souhaitez.</li>
-            <li style={styles.listItem}>
+            {/* <li style={styles.listItem}>
               Consultez la grille tarifaire (le prix peut être adapté selon vos besoins).
+            </li> */}
+            <li style={styles.listItem}>
+              Consultez les tarifs dans la section "Services". Le prix peut être adapté selon vos besoins).
             </li>
             <li style={styles.listItem}>Présenter une photo de vos cheveux ou locks.</li>
             <li style={styles.listItem}>Verser un acompte de 50%.
