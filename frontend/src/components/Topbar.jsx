@@ -56,9 +56,13 @@ export function Topbar(props) {
       gap: '16px',
       cursor: 'pointer',
     },
+    // logoImage: {
+    //   width: 32,
+    //   height: 32,
+    // },
     logoImage: {
-      width: 32,
-      height: 32,
+      width: 42,
+      height: 42,
     },
     logoText: {
       fontSize: '20px',
@@ -150,7 +154,8 @@ export function Topbar(props) {
         onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
         onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
       >
-        <img src="/locksHeader.svg" alt="Locks&Vous logo" style={styles.logoImage} />
+        {/* <img src="/locksHeader.svg" alt="Locks&Vous logo" style={styles.logoImage} /> */}
+         <img src="/newLocksHeader.svg" alt="Locks&Vous logo" style={styles.logoImage} />
         <span style={styles.logoText}>Locks&Vous</span>
       </div>
 
