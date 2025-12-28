@@ -12,7 +12,7 @@ export const PAGES = {
       { id: 'moisturizers', label: 'Crème, Huile & Autre', path: '/products/moisturizers' },
       { id: 'accessories', label: 'Accessoires', path: '/products/accessories' },
       { id: 'extensions', label: 'Extensions', path: '/products/extensions' },
-      { id: 'offers-products', label: 'Offres', path: '/products/offers' },
+      { id: 'offers-products', label: 'Offres - Entretien ', path: '/products/offers' },
     ],
   },
   'Services': {

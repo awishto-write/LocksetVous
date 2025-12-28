@@ -63,7 +63,7 @@ export function  Haircare() {
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Creme et beurre </h3>
+          <h3 style={cardStyles.cardTitle}>Crème et beurre </h3>
           {/* <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p> */}
         </div>
          <div style={cardStyles.card}>

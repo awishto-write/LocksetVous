@@ -52,18 +52,18 @@ export function Accessories() {
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 1</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 1.</p>
+          <h3 style={cardStyles.cardTitle}>Accessoires Locks</h3>
+          <p style={cardStyles.cardDescription}>Le must-have des locksés : style et soin au quotidien.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 2</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 2.</p>
+          <h3 style={cardStyles.cardTitle}>Accessoires Afro</h3>
+          <p style={cardStyles.cardDescription}>Pensés pour le confort du cheveu afro et le respect de sa nature.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 3</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p>
+          <h3 style={cardStyles.cardTitle}>Divers</h3>
+          <p style={cardStyles.cardDescription}>Univers capillaires.</p>
         </div>
       </div>
     </PageTemplate>

@@ -50,19 +50,19 @@ export function Extensions() {
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 1</h3>
+          <h3 style={cardStyles.cardTitle}>Naturelle</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 1.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 2</h3>
+          <h3 style={cardStyles.cardTitle}>Humain</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 2.</p>
         </div>
-        <div style={cardStyles.card}>
+        {/* <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
           <h3 style={cardStyles.cardTitle}>Bloc 3</h3>
           <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p>
-        </div>
+        </div> */}
       </div>
     </PageTemplate>
   );

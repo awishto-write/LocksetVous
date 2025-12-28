@@ -52,18 +52,18 @@ export function ProductOffers() {
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 1</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 1.</p>
+          <h3 style={cardStyles.cardTitle}>Pack Locks</h3>
+          <p style={cardStyles.cardDescription}>Chaque étape de vos locks, du départ à la pousse, sublimée par nos soins.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 2</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 2.</p>
+          <h3 style={cardStyles.cardTitle}>Pack Afro</h3>
+          <p style={cardStyles.cardDescription}>De la racine à la longueur, suivez la croissance naturelle de vos cheveux afro.</p>
         </div>
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 3</h3>
-          <p style={cardStyles.cardDescription}>Description spécifique du Bloc 3.</p>
+          <h3 style={cardStyles.cardTitle}>Pack Mix</h3>
+          <p style={cardStyles.cardDescription}>Quand locks riment avec beauté afro.</p>
         </div>
       </div>
     </PageTemplate>
