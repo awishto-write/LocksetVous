@@ -118,6 +118,12 @@ export function Home(props) {
             >
             Nos produits
           </button>
+          <button style={{ ...styles.button, ...styles.primaryButton }}
+           // onClick={() => onNavigate('/services/hairstyle')}
+            onClick={() => navigate('/services/appointment')}
+            >
+            RDV
+          </button>
         </div>
       </div>
       <div style={styles.cardSection}>
