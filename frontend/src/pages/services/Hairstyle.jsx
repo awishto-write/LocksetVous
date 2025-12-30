@@ -52,8 +52,10 @@ export function Hairstyle() {
       padding: '8px 16px',
       fontSize: '14px',
       backgroundColor: 'transparent',
-      color: theme.text,
-      border: `1px solid ${theme.border}`,
+      // color: theme.text,
+      // border: `1px solid ${theme.border}`,
+      color: theme.primary,
+      border: `1px solid ${theme.primary}`,
       borderRadius: '6px',
       cursor: 'pointer',
       transition: 'all 0.2s',
@@ -74,12 +76,16 @@ export function Hairstyle() {
                 style={cardStyles.cardButton}
                 onClick={() => navigate('/services/hairstyle/depart-locks')}
                 onMouseEnter={(e) => {
-                  e.target.style.borderColor = '#2563eb';
-                  e.target.style.color = '#2563eb';
+                  // e.target.style.borderColor = '#2563eb';
+                  // e.target.style.color = '#2563eb';
+                  e.target.style.borderColor = '#1d4ed8';
+                  e.target.style.color = '#1d4ed8';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.borderColor = theme.border;
-                  e.target.style.color = theme.text;
+                  // e.target.style.borderColor = theme.border;
+                  // e.target.style.color = theme.text;
+                  e.target.style.borderColor = theme.primary;
+                  e.target.style.color = theme.primary;
                 }}
               >
                 En savoir plus
