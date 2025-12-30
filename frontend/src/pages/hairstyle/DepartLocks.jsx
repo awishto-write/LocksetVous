@@ -42,9 +42,9 @@ export function DepartLocks() {
     { title: 'Départ en vanille', price: '65€' },
     { title: 'Départ au crochet', price: '80€' },
     { title: 'Micro twist', price: '100€' },
-    { title: 'Départ e braids', price: 'À partir de 90€' },
-    { title: 'Pose d\'extension', price: 'Selon le nombre à partir de 60€ si départ' },
-    { title: 'Rajout d\'extension', price: '50€ tête entière / 20€ si entre (5 et 15 tiges)' },
+    // { title: 'Départ e braids', price: 'À partir de 90€' },
+    // { title: 'Pose d\'extension', price: 'Selon le nombre à partir de 60€ si départ' },
+    // { title: 'Rajout d\'extension', price: '50€ tête entière / 20€ si entre (5 et 15 tiges)' },
   ];
 
   return (
