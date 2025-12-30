@@ -45,12 +45,14 @@ export function ProductOffers() {
     },
     cardTitle: { fontSize: '20px', fontWeight: 'bold', color: theme.primary },
     cardDescription: { marginTop: '8px', color: theme.secondary },
+    subtitle: { fontSize: '18px', color: theme.secondary, marginTop: '8px' },
   };
 
   return (
     <PageTemplate pageData={pageData}>
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
+          {/* <p style={cardStyles.subtitle}>Description détaillée du contenu disponible dans cette section.</p> */}
           <div style={cardStyles.cardImage}></div>
           <h3 style={cardStyles.cardTitle}>Pack Locks</h3>
           <p style={cardStyles.cardDescription}>Chaque étape de vos locks, du départ à la pousse, sublimée par nos soins.</p>

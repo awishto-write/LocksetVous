@@ -102,9 +102,11 @@
 
 import { useTheme } from '../contexts/ThemeContext';
 import { PAGES } from '../data/navigation';
+import { useNavigate } from 'react-router-dom';
 
 export function PageTemplate({ pageData, children }) {
   const { theme } = useTheme();
+  const navigate = useNavigate();
 
   // ---- Styles defined outside the return ----
   const styles = {
@@ -117,6 +119,10 @@ export function PageTemplate({ pageData, children }) {
       color: theme.secondary,
       fontSize: '14px',
       marginBottom: '16px',
+    },
+    breadcrumbItem: {
+      cursor: 'pointer',
+      textDecoration: 'underline',
     },
     title: {
       fontSize: '32px',
@@ -162,12 +168,19 @@ export function PageTemplate({ pageData, children }) {
         label = part.charAt(0).toUpperCase() + part.slice(1);
       }
 
+      const isLast = index === parts.length - 1;
       return (
-        <span
-          key={index}
-          style={{ color: index === parts.length - 1 ? theme.primary : theme.secondary }}
-        >
-          {label}{index < parts.length - 1 ? ' / ' : ''}
+        <span key={index}>
+          <span
+            style={{
+              color: isLast ? theme.primary : theme.secondary,
+              ...(isLast ? {} : styles.breadcrumbItem),
+            }}
+            onClick={isLast ? undefined : () => navigate(fullPath)}
+          >
+            {label}
+          </span>
+          {!isLast && <span style={{ color: theme.secondary }}> / </span>}
         </span>
       );
     });

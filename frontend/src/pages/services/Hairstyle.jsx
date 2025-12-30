@@ -10,14 +10,15 @@
 
 
 
-
 import { PageTemplate } from '../../components/PageTemplate';
 import { PAGES } from '../../data/navigation';
 import { useTheme } from '../../contexts/ThemeContext';
+import { useNavigate } from 'react-router-dom';
 
 export function Hairstyle() {
   const pageData = PAGES.Services.subItems.find(item => item.id === 'hairstyle');
   const { theme } = useTheme();
+  const navigate = useNavigate();
 
   // ---- Theme-based card styles outside return ----
   const cardStyles = {
@@ -46,16 +47,45 @@ export function Hairstyle() {
     },
     cardTitle: { fontSize: '20px', fontWeight: 'bold', color: theme.primary },
     cardDescription: { marginTop: '8px', color: theme.secondary },
+    cardButton: {
+      width: '100%',
+      padding: '8px 16px',
+      fontSize: '14px',
+      backgroundColor: 'transparent',
+      color: theme.text,
+      border: `1px solid ${theme.border}`,
+      borderRadius: '6px',
+      cursor: 'pointer',
+      transition: 'all 0.2s',
+      // New
+      marginTop: '16px',
+    },
   };
 
   return (
     <PageTemplate pageData={pageData}>
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
-          <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 1</h3>
+          {/* <div style={cardStyles.cardImage}></div> */}
+          <div style={{ ...cardStyles.cardImage, backgroundImage: 'url(/expertiseLocks.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <h3 style={cardStyles.cardTitle}>Départ de Locks</h3>
           <p style={cardStyles.cardDescription}>Nos départs crochet, micro twist, vanille twist.</p>
+          <button 
+                style={cardStyles.cardButton}
+                onClick={() => navigate('/services/hairstyle/depart-locks')}
+                onMouseEnter={(e) => {
+                  e.target.style.borderColor = '#2563eb';
+                  e.target.style.color = '#2563eb';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderColor = theme.border;
+                  e.target.style.color = theme.text;
+                }}
+              >
+                En savoir plus
+          </button>
         </div>
+
         <div style={cardStyles.card}>
           <div style={cardStyles.cardImage}></div>
           <h3 style={cardStyles.cardTitle}>Bloc 2</h3>

@@ -72,8 +72,10 @@ export function Home(props) {
       textAlign: 'center',
     },
     cardIcon: {
-      width: '48px',
-      height: '48px',
+      // width: '48px',
+      // height: '48px',
+      width: '80px',
+      height: '80px',
       margin: '0 auto 16px',
      // backgroundColor: theme.primary, // First
       backgroundColor: isDark ? 
@@ -128,7 +130,8 @@ export function Home(props) {
       </div>
       <div style={styles.cardSection}>
         <div style={styles.card}>
-          <div style={styles.cardIcon}>🌿</div>
+          {/* <div style={styles.cardIcon}>🌿</div> */}
+          <div style={{ ...styles.cardIcon, backgroundImage: 'url(/produitNaturel.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           <h3 style={styles.cardTitle}>Produits Naturels</h3>
           <p style={styles.cardText}>
             Formules authentiques aux ingrédients naturels pour nourrir en profondeur.
@@ -136,16 +139,16 @@ export function Home(props) {
         </div>
         <div style={styles.card}>
           <div style={styles.cardImage}></div>
-          <div style={styles.cardIcon}>✂️</div>
+          {/* <div style={styles.cardIcon}>✂️</div> */}
+          <div style={{ ...styles.cardIcon, backgroundImage: 'url(/expertiseLocks.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           <h3 style={styles.cardTitle}>Expertise Locks</h3>
           <p style={styles.cardText}>
             Spécialistes des locks, tresses et coiffures afro.
           </p>
         </div> 
         <div style={styles.card}>
-          <div style={styles.cardImage}></div>
-          {/* <div style={styles.cardIcon}>💎</div> */}
-          <div style={styles.cardIcon}>✨</div>
+          {/* <div style={styles.cardImage}></div> */}
+          <div style={{ ...styles.cardIcon, backgroundImage: 'url(/extensionPremium.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           <h3 style={styles.cardTitle}>Extensions Premium</h3>
           <p style={styles.cardText}>
             Extensions de qualité supérieure, 100% cheveux humains pour un rendu naturel.
