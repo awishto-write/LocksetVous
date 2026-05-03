@@ -24,7 +24,7 @@ const darkTheme = {
   background: '#1a1a1a',
   text: '#f8f4f2',
   //background: '#111111', // New
-  text: '#f4ede6', // New
+  //text: '#f4ede6', // New
   primary: '#a2540f',
   secondary: '#CED4DA',
  // secondary: '#c59a77', // New
