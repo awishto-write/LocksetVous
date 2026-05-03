@@ -1,7 +1,7 @@
 // src/pages/hairstyle/PrestationNantes.jsx
 
-import { PageTemplate } from '../../components/PageTemplate';
-import { useTheme } from '../../contexts/ThemeContext';
+import { PageTemplate } from '../../../components/PageTemplate';
+import { useTheme } from '../../../contexts/ThemeContext';
 
 export function PrestationNantes() {
   const { theme } = useTheme();

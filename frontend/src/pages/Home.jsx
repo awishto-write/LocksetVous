@@ -116,7 +116,7 @@ export function Home(props) {
           </button>
           <button style={{ ...styles.button, ...styles.secondaryButton }}
             //onClick={() => onNavigate('/products/moisturizers')}
-            onClick={() => navigate('/products/moisturizers')}
+            onClick={() => navigate('/products/accessories')}
             >
             Nos produits
           </button>

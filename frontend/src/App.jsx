@@ -19,6 +19,7 @@ import { Accessories } from './pages/products/Accessories';
 import { Extensions } from './pages/products/Extensions';
 import { Moisturizers } from './pages/products/Moisturizers';
 import { ProductOffers } from './pages/products/ProductOffers';
+import { AccesoriesAbidjan } from './pages/products/accesories/AccesoriesAbidjan';
 // ✅ Service Pages
 import { Appointment } from './pages/services/Appointment';
 import { Hairstyle } from './pages/services/Hairstyle';
@@ -26,8 +27,8 @@ import { Haircare } from './pages/services/Haircare';
 import { Kid } from './pages/services/Kid';
 import { ProductServices } from './pages/services/ProductServices';
 // Hairstyle sub-pages
-import { PrestationAbidjan } from './pages/hairstyle/PrestationAbidjan';
-import { PrestationNantes } from './pages/hairstyle/PrestationNantes';
+import { PrestationAbidjan } from './pages/services/hairstyle/PrestationAbidjan';
+import { PrestationNantes } from './pages/services/hairstyle/PrestationNantes';
 
 function MainApp() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -79,6 +80,7 @@ function MainApp() {
 
           {/* Products */}
           <Route path="/products/accessories" element={<Accessories />} />
+          <Route path="/products/accessories/accesories-abidjan" element={<AccesoriesAbidjan />} />
           <Route path="/products/extensions" element={<Extensions />} />
           <Route path="/products/moisturizers" element={<Moisturizers />} />
           <Route path="/products/offers" element={<ProductOffers />} />

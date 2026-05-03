@@ -24,7 +24,8 @@ export function Hairstyle() {
   const cardStyles = {
     cardGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      //gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 500px))', // 250 + 250 + gap ≈ 524px, so it helps columns to stay on the same line for lightly larger windows
       gap: '24px',
       marginTop: '32px',
     },
@@ -76,8 +77,10 @@ export function Hairstyle() {
                 style={cardStyles.cardButton}
                 onClick={() => navigate('/services/hairstyle/prestation-abidjan')}
                 onMouseEnter={(e) => {
-                  e.target.style.borderColor = theme.primary;
-                  e.target.style.color = theme.primary;
+                  // e.target.style.borderColor = theme.primary;
+                  // e.target.style.color = theme.primary;
+                  e.target.style.borderColor = '#1d4ed8';
+                  e.target.style.color = '#1d4ed8';
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.borderColor = theme.primary;
@@ -97,8 +100,10 @@ export function Hairstyle() {
             style={cardStyles.cardButton}
             onClick={() => navigate('/services/hairstyle/prestation-nantes')}
             onMouseEnter={(e) => {
-              e.target.style.borderColor = theme.primary;
-              e.target.style.color = theme.primary;
+              // e.target.style.borderColor = theme.primary;
+              // e.target.style.color = theme.primary;
+              e.target.style.borderColor = '#1d4ed8';
+              e.target.style.color = '#1d4ed8';
             }}
             onMouseLeave={(e) => {
               e.target.style.borderColor = theme.primary;

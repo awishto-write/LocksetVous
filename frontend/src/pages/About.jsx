@@ -2,7 +2,7 @@
 // src/pages/About.jsx
 // ===================================
 import { useState } from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 export function About(props) {
@@ -14,6 +14,10 @@ export function About(props) {
     'https://placehold.co/1000x600/CED4DA/1A1A1A?text=Locks+%26+Vous+Story+2',
     'https://placehold.co/1000x600/2d2d2d/f8f4f2?text=Locks+%26+Vous+Story+3',
   ];
+
+  const handlePreviousImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -45,10 +49,9 @@ export function About(props) {
     },
     storyParagraph: {
       //marginBottom: '16px',
-     //lineHeight: '1.6',
+      //lineHeight: '1.6',
       color: theme.secondary,
-
-       marginBottom: "20px", // Modified
+      marginBottom: "20px", // Modified
       fontSize: "18px", // Added
     },
     gallerySection: {
@@ -78,6 +81,23 @@ export function About(props) {
       display: 'block',
       transition: 'opacity 0.5s ease',
       opacity: 1,
+    },
+    prevButton: {
+      position: 'absolute',
+      top: '50%',
+      left: '16px',
+      transform: 'translateY(-50%)',
+      backgroundColor: 'rgba(0,0,0,0.5)',
+      color: '#fff',
+      border: 'none',
+      borderRadius: '50%',
+      width: '40px',
+      height: '40px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      cursor: 'pointer',
+      transition: 'background-color 0.2s ease',
     },
     nextButton: {
       position: 'absolute',
@@ -194,13 +214,16 @@ export function About(props) {
       {/* */}
 
       <div style={styles.gallerySection}>
-        <h2 style={styles.galleryTitle}>Take a Peek At the Picture Gallery</h2>
+        <h2 style={styles.galleryTitle}>Découvrez notre galerie de photos</h2>
         <div style={styles.galleryImageContainer}>
           <img
             src={images[currentImageIndex]}
             alt={`Gallery image ${currentImageIndex + 1}`}
             style={styles.galleryImage}
           />
+          <button style={styles.prevButton} onClick={handlePreviousImage}>
+            <ChevronLeft size={24} />
+          </button>
           <button style={styles.nextButton} onClick={handleNextImage}>
             <ChevronRight size={24} />
           </button>
