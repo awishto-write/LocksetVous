@@ -10,17 +10,19 @@ export function Footer() {
 
     const styles = {
     footer: {
-       backgroundColor: theme.cardBackground, // New
-       //backgroundColor: theme.background,
-       borderTop: `1px solid ${theme.secondary}`,   // thicker top border
-      // boxShadow: `0 1px 3px ${theme.secondary}`,
-        boxShadow: isDark ? 
-         '0 -4px 10px rgba(121, 118, 118, 0.46)' : // subtle light shadow in dark mode
-         '0 -4px 10px rgba(0, 0, 0, 0.40)',        // dark shadow in light mode
-       marginTop: 'auto',   // keeps it at bottom
-       padding: '12px 0',   // <-- reduced padding to make it shorter
-       textAlign: 'center',
-       fontSize: '14px',
+      backgroundColor: theme.cardBackground,
+      color: theme.text,
+      //borderTop: `1px solid ${theme.cardBackground}`,
+      borderTop: `1px solid ${theme.secondary}`, // thicker top border
+      boxShadow: isDark ?
+      //  '0 -4px 10px rgba(0, 0, 0, 0.25)' :
+      //  '0 -4px 10px rgba(0, 0, 0, 0.08)',
+      '0 -4px 10px rgba(121, 118, 118, 0.46)' : // subtle light shadow for dark mode
+      '0 -4px 10px rgba(0, 0, 0, 0.40)', // dark shadow for light mode
+      marginTop: 'auto', // Keepts footer at bottom of page
+      padding: '12px 0', // Reduced padding to make it shorter
+      textAlign: 'center',
+      fontSize: '14px',
     },
     container: {
       maxWidth: '1280px',

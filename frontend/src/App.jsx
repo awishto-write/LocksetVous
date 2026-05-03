@@ -26,7 +26,8 @@ import { Haircare } from './pages/services/Haircare';
 import { Kid } from './pages/services/Kid';
 import { ProductServices } from './pages/services/ProductServices';
 // Hairstyle sub-pages
-import { DepartLocks } from './pages/hairstyle/DepartLocks';
+import { PrestationAbidjan } from './pages/hairstyle/PrestationAbidjan';
+import { PrestationNantes } from './pages/hairstyle/PrestationNantes';
 
 function MainApp() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -85,7 +86,8 @@ function MainApp() {
           {/* Services */}
           <Route path="/services/appointment" element={<Appointment />} />
           <Route path="/services/hairstyle" element={<Hairstyle />} />
-          <Route path="/services/hairstyle/depart-locks" element={<DepartLocks />} />
+          <Route path="/services/hairstyle/prestation-abidjan" element={<PrestationAbidjan />} />
+          <Route path="/services/hairstyle/prestation-nantes" element={<PrestationNantes />} />
           <Route path="/services/haircare" element={<Haircare />} />
           <Route path="/services/kid" element={<Kid />} />
           <Route path="/services/offers" element={<ProductServices />} />

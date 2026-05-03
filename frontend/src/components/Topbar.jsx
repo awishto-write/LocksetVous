@@ -154,7 +154,6 @@ export function Topbar(props) {
         onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
         onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
       >
-        {/* <img src="/locksHeader.svg" alt="Locks&Vous logo" style={styles.logoImage} /> */}
          <img src="/newLocksHeader.svg" alt="Locks&Vous logo" style={styles.logoImage} />
         <span style={styles.logoText}>Locks&Vous</span>
       </div>

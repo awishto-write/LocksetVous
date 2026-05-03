@@ -313,6 +313,8 @@ export function Contact(props) {
           </form>
         </div>
 
+        {/* See if those links below can be modified to open a new page instead of replacing the current page*/}
+
         <div style={styles.infoSection}>
           <div style={styles.infoItem}>
             <h3 style={styles.infoTitle}>

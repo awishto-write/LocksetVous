@@ -10,7 +10,7 @@ export function About(props) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    'https://placehold.co/1000x600/58A4FF/FFFFFF?text=Locks+%26+Vous+Story+1',
+    'https://placehold.co/1000x600/7B3F00/FFFFFF?text=Locks+%26+Vous+Story+1',
     'https://placehold.co/1000x600/CED4DA/1A1A1A?text=Locks+%26+Vous+Story+2',
     'https://placehold.co/1000x600/2d2d2d/f8f4f2?text=Locks+%26+Vous+Story+3',
   ];

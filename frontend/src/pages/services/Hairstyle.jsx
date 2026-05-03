@@ -69,21 +69,17 @@ export function Hairstyle() {
       <div style={cardStyles.cardGrid}>
         <div style={cardStyles.card}>
           {/* <div style={cardStyles.cardImage}></div> */}
-          <div style={{ ...cardStyles.cardImage, backgroundImage: 'url(/expertiseLocks.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <h3 style={cardStyles.cardTitle}>Départ de Locks</h3>
-          <p style={cardStyles.cardDescription}>Nos départs crochet, micro twist, vanille twist.</p>
+          <div style={{ ...cardStyles.cardImage, backgroundImage: 'url(/prestationIconCut.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <h3 style={cardStyles.cardTitle}>Prestation - Abidjan</h3>
+          <p style={cardStyles.cardDescription}>Nos départs locks, retwist, entretien, coiffure.</p>
           <button 
                 style={cardStyles.cardButton}
-                onClick={() => navigate('/services/hairstyle/depart-locks')}
+                onClick={() => navigate('/services/hairstyle/prestation-abidjan')}
                 onMouseEnter={(e) => {
-                  // e.target.style.borderColor = '#2563eb';
-                  // e.target.style.color = '#2563eb';
-                  e.target.style.borderColor = '#1d4ed8';
-                  e.target.style.color = '#1d4ed8';
+                  e.target.style.borderColor = theme.primary;
+                  e.target.style.color = theme.primary;
                 }}
                 onMouseLeave={(e) => {
-                  // e.target.style.borderColor = theme.border;
-                  // e.target.style.color = theme.text;
                   e.target.style.borderColor = theme.primary;
                   e.target.style.color = theme.primary;
                 }}
@@ -93,15 +89,26 @@ export function Hairstyle() {
         </div>
 
         <div style={cardStyles.card}>
-          <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 2</h3>
-          <p style={cardStyles.cardDescription}>Nos extensions naturels humains.</p>
+          {/* <div style={cardStyles.cardImage}></div> */}
+          <div style={{ ...cardStyles.cardImage, backgroundImage: 'url(/prestationIconCut.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <h3 style={cardStyles.cardTitle}>Prestation - Nantes</h3>
+          <p style={cardStyles.cardDescription}>Nos départs locks, retwist, entretien, coiffure.</p>
+          <button
+            style={cardStyles.cardButton}
+            onClick={() => navigate('/services/hairstyle/prestation-nantes')}
+            onMouseEnter={(e) => {
+              e.target.style.borderColor = theme.primary;
+              e.target.style.color = theme.primary;
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.borderColor = theme.primary;
+              e.target.style.color = theme.primary;
+            }}
+          >
+            En savoir plus
+          </button>
         </div>
-        <div style={cardStyles.card}>
-          <div style={cardStyles.cardImage}></div>
-          <h3 style={cardStyles.cardTitle}>Bloc 3</h3>
-          <p style={cardStyles.cardDescription}>Coiffure sur locks, bantu locks, vanille barrels twist.</p>
-        </div>
+
       </div>
     </PageTemplate>
   );

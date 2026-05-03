@@ -131,7 +131,7 @@ export function Home(props) {
       <div style={styles.cardSection}>
         <div style={styles.card}>
           {/* <div style={styles.cardIcon}>🌿</div> */}
-          <div style={{ ...styles.cardIcon, backgroundImage: 'url(/produitNaturel.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div style={{ ...styles.cardIcon, backgroundImage: 'url(/productBubbleFront.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           <h3 style={styles.cardTitle}>Produits Naturels</h3>
           <p style={styles.cardText}>
             Formules authentiques aux ingrédients naturels pour nourrir en profondeur.
@@ -140,7 +140,7 @@ export function Home(props) {
         <div style={styles.card}>
           <div style={styles.cardImage}></div>
           {/* <div style={styles.cardIcon}>✂️</div> */}
-          <div style={{ ...styles.cardIcon, backgroundImage: 'url(/expertiseLocks.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div style={{ ...styles.cardIcon, backgroundImage: 'url(/locksBubbleFront.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
           <h3 style={styles.cardTitle}>Expertise Locks</h3>
           <p style={styles.cardText}>
             Spécialistes des locks, tresses et coiffures afro.

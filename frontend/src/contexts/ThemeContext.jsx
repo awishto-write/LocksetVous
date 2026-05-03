@@ -8,12 +8,14 @@ import { createContext, useContext, useState } from 'react';
 const ThemeContext = createContext();
 
 const lightTheme = {
+  //background: '#ffffff', // New
   background: '#f8f4f2',
-  text: '#1a1a1a',
-  primary: '#007BFF',
-  secondary: '#495057',
+  text: '#1e1a17',
+  primary: '#a2540f',
+  secondary: '#733e0e',
   cardBackground: '#ffffff',
-  accent: '#007BFF',
+  accent: '#a2540f', // New
+   //accent: '#733e0e', 
   transition: 'background-color 0.3s ease, color 0.3s ease',
   borderRadius: '8px',
 };
@@ -21,10 +23,14 @@ const lightTheme = {
 const darkTheme = {
   background: '#1a1a1a',
   text: '#f8f4f2',
-  primary: '#58A4FF',
+  //background: '#111111', // New
+  text: '#f4ede6', // New
+  primary: '#a2540f',
   secondary: '#CED4DA',
+ // secondary: '#c59a77', // New
   cardBackground: '#2d2d2d',
-  accent: '#58A4FF',
+  //cardBackground: '#1f1812', //New
+  accent: '#a2540f', // New
   transition: 'background-color 0.3s ease, color 0.3s ease',
   borderRadius: '8px',
 };
